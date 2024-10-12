@@ -89,7 +89,7 @@ class ImageCompressController extends Controller
     // Method to download the image
     public function downloadImage($fileName)
     {
-        $filePath = public_path('public/ngo_images/' . $fileName);
+        $filePath = public_path('ngo_images/' . $fileName);
 
         if (file_exists($filePath)) {
             return response()->download($filePath);
