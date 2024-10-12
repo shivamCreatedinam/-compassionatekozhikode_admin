@@ -19,6 +19,7 @@ class ImageCompressController extends Controller
 
     public function uploadImage(Request $request)
     {
+        ini_set('max_execution_time', 300);
         // Validate the image
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:25000', // max size 25MB
@@ -76,7 +77,7 @@ class ImageCompressController extends Controller
             'success' => true,
             'message' => 'Image uploaded and compressed successfully',
             'image_name' => $imageName,
-            'preview_link' => url('ngo_images/' . $imageName),
+            'preview_link' => url('public/ngo_images/' . $imageName),
             'download_link' => route('download-image', ['fileName' => $imageName]),
             'original_size_mb' => round($imageSizeBefore, 2) . ' MB',
             'compressed_size_mb' => round($imageSizeAfter, 2) . ' MB',
@@ -88,7 +89,7 @@ class ImageCompressController extends Controller
     // Method to download the image
     public function downloadImage($fileName)
     {
-        $filePath = public_path('ngo_images/' . $fileName);
+        $filePath = public_path('public/ngo_images/' . $fileName);
 
         if (file_exists($filePath)) {
             return response()->download($filePath);
