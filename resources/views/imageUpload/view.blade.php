@@ -77,22 +77,22 @@
                                         <h6>Image Name : </h6>
                                     </div>
                                     <div class="col-8"><span>{{ $data['image_name'] }}</span></div>
-
+<hr>
                                     <div class="col-4">
                                         <h6>Image Preview Link : </h6>
                                     </div>
                                     <div class="col-8"><span>{{ $data['preview_link'] }}</span></div>
-
+<hr>
                                     <div class="col-4">
                                         <h6>Image Download Link : </h6>
                                     </div>
                                     <div class="col-8"><span>{{ $data['download_link'] }}</span></div>
-
+<hr>
                                     <div class="col-4">
                                         <h6>Image Original Size : </h6>
                                     </div>
                                     <div class="col-8"><span>{{ $data['original_size_mb'] }}</span></div>
-
+<hr>
                                     <div class="col-4">
                                         <h6>Image Compressed Size : </h6>
                                     </div>
