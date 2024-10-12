@@ -59,7 +59,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card" style="width: 18rem;">
-                            <img src="{{ $data['preview_link'] }}" class="card-img-top" alt="">
+                            <a href="{{ $data['preview_link'] }}" target="_blank"><img src="{{ $data['preview_link'] }}" class="card-img-top" alt="{{ $data['image_name'] }}"></a>
                             <div class="card-body">
                                 <h5 class="card-title">{{ $data['image_name'] }}</h5>
                                 <a href="{{ $data['download_link'] }}" class="btn btn-primary">Download Image</a>
@@ -81,22 +81,22 @@
                                     <div class="col-4">
                                         <h6>Image Preview Link : </h6>
                                     </div>
-                                    <div class="col-8"><span>{{ $data['preview_link'] }}</span></div>
+                                    <div class="col-8 mb-1"><span>{{ $data['preview_link'] }}</span></div>
 <hr>
                                     <div class="col-4">
                                         <h6>Image Download Link : </h6>
                                     </div>
-                                    <div class="col-8"><span>{{ $data['download_link'] }}</span></div>
+                                    <div class="col-8 mb-1"><span>{{ $data['download_link'] }}</span></div>
 <hr>
                                     <div class="col-4">
                                         <h6>Image Original Size : </h6>
                                     </div>
-                                    <div class="col-8"><span>{{ $data['original_size_mb'] }}</span></div>
+                                    <div class="col-8 mb-1"><span class="text-danger">{{ $data['original_size_mb'] }}</span></div>
 <hr>
                                     <div class="col-4">
                                         <h6>Image Compressed Size : </h6>
                                     </div>
-                                    <div class="col-8"><span>{{ $data['compressed_size_mb'] }}</span></div>
+                                    <div class="col-8 mb-1"><span class="text-success">{{ $data['compressed_size_mb'] }}</span></div>
 
                                 </div>
                             </div>
