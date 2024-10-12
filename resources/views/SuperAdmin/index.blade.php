@@ -18,7 +18,7 @@
                                         70</small>
                                 </div>
                                 <div class="avatar">
-                                    <img src="{{asset('/public/assets/img/icons/unicons/chart-success.png')}}"
+                                    <img src="{{asset('./public/assets/img/icons/unicons/chart-success.png')}}"
                                         alt="chart success" class="rounded" />
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                                         70</small>
                                 </div>
                                 <div class="avatar">
-                                    <img src="{{asset('/public/assets/img/icons/unicons/chart-success.png')}}"
+                                    <img src="{{asset('./public/assets/img/icons/unicons/chart-success.png')}}"
                                         alt="chart success" class="rounded" />
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                         <div class="tab-pane fade show active" id="navs-tabs-line-card-income" role="tabpanel">
                             <div class="d-flex p-4 pt-3">
                                 <div class="avatar flex-shrink-0 me-3">
-                                    <img src="{{asset('/public/assets/img/icons/unicons/wallet.png')}}" alt="User" />
+                                    <img src="{{asset('./public/assets/img/icons/unicons/wallet.png')}}" alt="User" />
                                 </div>
                                 <div>
                                     <small class="text-muted d-block">Total Balance</small>
