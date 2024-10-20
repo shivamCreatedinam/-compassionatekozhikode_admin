@@ -13,22 +13,20 @@ return new class extends Migration
     {
         Schema::create('ngos', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // NGO name
-            $table->string('description')->nullable(); // Description of the NGO
-            $table->string('email')->unique(); // NGO's contact email
-            $table->string('password')->nullable();
-            $table->string('contact_number')->nullable(); // Contact phone number
+            $table->string('ngo_name'); // NGO name
+            $table->string('ngo_reg_no')->nullable();
+            $table->text('description')->nullable(); // Description of the NGO
+            $table->string('ngo_start_date')->nullable(); // ngo_start_date
+            $table->string('logo')->nullable(); // NGO's logo / Icon
+            $table->string('email')->nullable(); // NGO's contact email
+            $table->text('contact_number')->nullable(); // Multiple Contact number
+            $table->text('address')->nullable(); // Full address
+            $table->longText('banner_images')->nullable(); // Banner Images multiples
             $table->string('website')->nullable(); // NGO's official website
             $table->string('facebook_link')->nullable(); // Facebook page link
             $table->string('twitter_link')->nullable(); // Twitter profile link
             $table->string('instagram_link')->nullable(); // Instagram profile link
-            $table->string('address')->nullable(); // Street address
-            $table->string('city')->nullable(); // City
-            $table->string('state')->nullable(); // State or region
-            $table->string('country')->nullable(); // Country
-            $table->string('zip_code')->nullable(); // Postal/zip code
-            $table->string('amazon_wishlist_link')->nullable(); // Amazon wishlist link for donations
-            $table->string('logo')->nullable(); // NGO's logo
+            $table->string('youtube_link')->nullable(); // Youtube profile link
             $table->timestamps(); // Timestamps (created_at, updated_at)
         });
     }

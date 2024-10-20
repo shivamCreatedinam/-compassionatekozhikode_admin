@@ -3,6 +3,7 @@
 use App\Http\Controllers\ImageCompressController;
 use App\Http\Controllers\Ngo\NgoAuthController;
 use App\Http\Controllers\Ngo\NgoDashboardController;
+use App\Http\Controllers\SuperAdmin\NgoController;
 use App\Http\Controllers\SuperAdmin\NgoRegistrationController;
 use App\Http\Controllers\SuperAdmin\SuperAdminAuthController;
 use App\Http\Controllers\SuperAdmin\SuperAdminDashboardController;
@@ -35,7 +36,14 @@ Route::name('sadmin.')->group(function () {
     // Admin protected routes
     Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [SuperAdminDashboardController::class, 'index'])->name('dashboard');
-        Route::post('/register-ngo', [NgoRegistrationController::class, 'register'])->name('register.ngo');
+
+
+        Route::prefix('ngo')->group(function () {
+            Route::get('/list', [NgoController::class, 'index'])->name('ngo_list');
+            Route::get('/register', [NgoController::class, 'registerForm'])->name('register_ngo');
+            Route::post('/create', [NgoController::class, 'storeNGO'])->name('create_ngo');
+            Route::delete('/ngo-delete/{id}', [NgoController::class, 'deleteNGO'])->name('ngo_delete');
+        });
     });
 });
 

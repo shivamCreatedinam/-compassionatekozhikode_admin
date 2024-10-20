@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="{{route('sadmin.dashboard')}}" class="app-brand-link">
+        <a href="{{ route('sadmin.dashboard') }}" class="app-brand-link">
             <span class="app-brand-logo demo">
                 <svg width="25" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -57,7 +57,8 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item active">
+
+        <li class="menu-item {{ \Request::is('dashboard*') ? 'active' : '' }}">
             <a href="{{ route('sadmin.dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
@@ -168,67 +169,36 @@
                         </ul>
                     </li> -->
         <!-- Components -->
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Roles Management</span></li>
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Menus</span></li>
 
-        <li class="menu-item ">
-            <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-user"></i>
-                <div data-i18n="Analytics">Admins</div>
+        <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="NGOs">NGOs</div>
             </a>
+
+            <ul class="menu-sub">
+                <li class="menu-item {{ \Request::is('ngo/register*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
+                        <div data-i18n="Register New NGO">Register New NGO</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ \Request::is('ngo/list*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="NGOs List">NGOs List</div>
+                    </a>
+                </li>
+
+            </ul>
         </li>
         <li class="menu-item ">
-            <a href="index.html" class="menu-link">
+            <a href="#" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-table"></i>
                 <div data-i18n="Analytics">Users</div>
             </a>
         </li>
 
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Cards Management</span></li>
-
-        <li class="menu-item ">
-            <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-card"></i>
-                <div data-i18n="Analytics">Vcards</div>
-            </a>
-        </li>
-
-        <li class="menu-item ">
-            <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-cards"></i>
-                <div data-i18n="Analytics">Sell NFC cards</div>
-            </a>
-        </li>
-        <li class="menu-item ">
-            <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-support"></i>
-                <div data-i18n="Analytics">V Card Template</div>
-            </a>
-        </li>
-        <li class="menu-item ">
-            <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Cash Payments</div>
-            </a>
-        </li>
-
-        <li class="menu-item ">
-            <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-detail"></i>
-                <div data-i18n="Analytics">Subscriptions Plans</div>
-            </a>
-        </li>
-        <li class="menu-item ">
-            <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Plans</div>
-            </a>
-        </li>
-        <li class="menu-item ">
-            <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-copy"></i>
-                <div data-i18n="Analytics">Affliations</div>
-            </a>
-        </li>
 
         <!-- Cards -->
         <!-- <li class="menu-item">
