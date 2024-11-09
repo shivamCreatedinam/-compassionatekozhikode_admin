@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Ngo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 use App\Http\Controllers\Api\AuthApiController;
+use App\Models\Ngo;
+use Exception;
+
 
 class NgoApiController extends Controller
 {
@@ -17,7 +19,6 @@ class NgoApiController extends Controller
     {
         $data = Ngo::latest()->get();
         return response()->json(['success' => true, 'Ngos' => $data]);
-        
     }
 
     public function storeNGO(Request $request)
@@ -116,7 +117,4 @@ class NgoApiController extends Controller
             return redirect()->back()->with("error", $e->getMessage());
         }
     }
-
-
-
 }

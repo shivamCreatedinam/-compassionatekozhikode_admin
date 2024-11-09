@@ -47,12 +47,21 @@ class AuthApiController extends Controller
         // Return a JSON response with user details and access token
         return response()->json([
             'success' => true,
-            'message' => 'Registration successful'
+            'message' => 'Registration successful',
+            'access_token' => $token,
+            'token_type' => 'Bearer',
+            'user' => $user
         ], 201);
     }
 
     public function login(Request $request)
     {
+        // Validate the request data
+        // $request->validate([
+        //     'email' => 'required|email',
+        //     'password' => 'required|string|min:6',
+        // ]);
+
         $credentials = $request->only('email', 'password');
 
         // Attempt to authenticate the user

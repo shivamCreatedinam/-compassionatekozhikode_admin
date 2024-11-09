@@ -15,13 +15,6 @@ use App\Http\Controllers\Api\AuthApiController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-
-//     Route::get('/list', [NgoApiController::class, 'index'])->name('ngo_list');
-
-
-// });
 
 Route::post('/login', [AuthApiController::class, 'login'])->name('login');
 Route::post('/register', [AuthApiController::class, 'register'])->name('register');
@@ -34,6 +27,7 @@ Route::middleware('auth:sanctum')->group(function() {
     Route::get('/list', [NgoApiController::class, 'index'])->name('ngo_list');
     Route::post('/create', [NgoApiController::class, 'storeNGO'])->name('create_ngo');
     Route::get('/ngo-delete/{id}', [NgoApiController::class, 'deleteNGO'])->name('ngo_delete');
+
 
 });
 
