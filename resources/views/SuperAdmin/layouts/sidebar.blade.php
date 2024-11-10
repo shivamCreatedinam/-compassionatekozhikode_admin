@@ -192,14 +192,182 @@
 
             </ul>
         </li>
-        <li class="menu-item ">
-            <a href="#" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-table"></i>
-                <div data-i18n="Analytics">Users</div>
+        <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="NGOs">Users</div>
             </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
+                        <div data-i18n="All User">All User</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ \Request::is('user/block*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="Block List">Block User</div>
+                    </a>
+                </li>
+                
+                 <li class="menu-item {{ \Request::is('user/guest*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="Guest List">Guest User</div>
+                    </a>
+                </li>
+
+            </ul>
         </li>
+        <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="NGOs">Product</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
+                        <div data-i18n="All User">All Product</div>
+                    </a>
+                </li>
 
+                <li class="menu-item {{ \Request::is('user/block*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="Block List">List Product</div>
+                    </a>
+                </li>
+                
+                 <li class="menu-item {{ \Request::is('user/guest*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="Guest List">Hold Product</div>
+                    </a>
+                </li>
 
+            </ul>
+        </li>
+        <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="NGOs">Event</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
+                        <div data-i18n="All User">All Event</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ \Request::is('user/block*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="Block List">Event List</div>
+                    </a>
+                </li>
+                
+                 <li class="menu-item {{ \Request::is('user/guest*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="Guest List">Schedule Event</div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+                <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="NGOs">Blog</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
+                        <div data-i18n="All User">New Blog</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ \Request::is('user/block*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="Block List">All Blog</div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="NGOs">Post</div>
+            </a>
+             <ul class="menu-sub">
+                <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
+                        <div data-i18n="All User">New Post</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ \Request::is('user/block*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="Block List">All Post</div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="NGOs">Setting</div>
+            </a>
+             <ul class="menu-sub">
+                <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
+                        <div data-i18n="All User">Change Admin Password</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ \Request::is('user/block*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                        <div data-i18n="Block List">Change NGO Password</div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="NGOs">Notification</div>
+            </a>
+             <ul class="menu-sub">
+                <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
+                        <div data-i18n="All User">Custom notificaiton</div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <!-- <li class="menu-item ">-->
+        <!--    <a href="#" class="menu-link">-->
+        <!--        <i class="menu-icon tf-icons bx bx-layout"></i>-->
+        <!--        <div data-i18n="product_list">product List</div>-->
+        <!--    </a>-->
+        <!--</li>-->
+        <!--<li class="menu-item ">-->
+        <!--    <a href="#" class="menu-link">-->
+        <!--        <i class="menu-icon tf-icons bx bx-layout"></i>-->
+        <!--        <div data-i18n="Events">Events</div>-->
+        <!--    </a>-->
+        <!--</li>-->
+        <!--<li class="menu-item ">-->
+        <!--    <a href="#" class="menu-link">-->
+        <!--        <i class="menu-icon tf-icons bx bx-layout"></i>-->
+        <!--        <div data-i18n="Blog">Blog</div>-->
+        <!--    </a>-->
+        <!--</li>-->
+        <!--<li class="menu-item ">-->
+        <!--    <a href="#" class="menu-link">-->
+        <!--        <i class="menu-icon tf-icons bx bx-layout"></i>-->
+        <!--        <div data-i18n="Setting">Setting</div>-->
+        <!--    </a>-->
+        <!--</li>-->
         <!-- Cards -->
         <!-- <li class="menu-item">
                         <a href="cards-basic.html" class="menu-link">

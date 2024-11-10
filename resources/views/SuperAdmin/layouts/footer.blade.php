@@ -8,19 +8,7 @@
                                     document.write(new Date().getFullYear());
                                 </script>
                                 <a href="#" target="_blank"
-                                    class="footer-link fw-bolder"> Scale Us</a>
-                            </div>
-                            <div>
-                                <a href="https://themeselection.com/license/" class="footer-link me-4"
-                                    target="_blank">License</a>
-                                <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More
-                                    Themes</a>
-
-                                <a href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                                    target="_blank" class="footer-link me-4">Documentation</a>
-
-                                <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                                    target="_blank" class="footer-link me-4">Support</a>
+                                    class="footer-link fw-bolder"> Createdinam ❤ ️The Human Touch </a>
                             </div>
                         </div>
                     </footer>
