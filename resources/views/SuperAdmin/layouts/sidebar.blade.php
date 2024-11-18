@@ -192,14 +192,14 @@
 
             </ul>
         </li>
-        <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+        <li class="menu-item {{ \Request::is('user*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="NGOs">Users</div>
+                <div data-i18n="Users">Users</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
-                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
+                    <a href="{{ route('sadmin.all_users') }}" class="menu-link">
                         <div data-i18n="All User">All User</div>
                     </a>
                 </li>
@@ -256,15 +256,15 @@
                     </a>
                 </li>
 
-                <li class="menu-item {{ \Request::is('user/block*') ? 'active' : '' }}">
-                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
-                        <div data-i18n="Block List">Event List</div>
+                <li class="menu-item {{ \Request::is('event/event-list*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.event-list') }}" class="menu-link">
+                        <div data-i18n="Event List">Event List</div>
                     </a>
                 </li>
                 
-                 <li class="menu-item {{ \Request::is('user/guest*') ? 'active' : '' }}">
-                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
-                        <div data-i18n="Guest List">Schedule Event</div>
+                 <li class="menu-item {{ \Request::is('event/show_event_form*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.show_event_form') }}" class="menu-link">
+                        <div data-i18n="Event">Schedule Event</div>
                     </a>
                 </li>
 
@@ -290,20 +290,20 @@
 
             </ul>
         </li>
-        <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+        <li class="menu-item {{ \Request::is('post*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="NGOs">Post</div>
+                <div data-i18n="Posts">Post</div>
             </a>
              <ul class="menu-sub">
-                <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
-                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
-                        <div data-i18n="All User">New Post</div>
+                <li class="menu-item {{ \Request::is('post/add_post*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.add_post') }}" class="menu-link">
+                        <div data-i18n="New Post">New Post</div>
                     </a>
                 </li>
 
-                <li class="menu-item {{ \Request::is('user/block*') ? 'active' : '' }}">
-                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                <li class="menu-item {{ \Request::is('post/post_list*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.post_list') }}" class="menu-link">
                         <div data-i18n="Block List">All Post</div>
                     </a>
                 </li>

@@ -4,6 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\NgoApiController;
 use App\Http\Controllers\Api\AuthApiController;
+use App\Http\Controllers\Api\PostApiController;
+use App\Http\Controllers\Api\EventApiController;
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +22,11 @@ use App\Http\Controllers\Api\AuthApiController;
 
 Route::post('/login', [AuthApiController::class, 'login'])->name('login');
 Route::post('/register', [AuthApiController::class, 'register'])->name('register');
+
+Route::get('/post_list', [PostApiController::class, 'postList'])->name('post_list');
+Route::get('/event_list', [EventApiController::class, 'eventList'])->name('event_list');
+Route::get('/upcoming_event', [EventApiController::class, 'upcomingEvent'])->name('upcoming_event');
+Route::get('/past_event', [EventApiController::class, 'pastEvent'])->name('past_event');
 
 Route::middleware('auth:sanctum')->group(function() {
     // Route::get('/user', function (Request $request) {

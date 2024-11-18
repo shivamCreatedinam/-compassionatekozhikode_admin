@@ -37,8 +37,16 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css">
     <!-- Page CSS -->
 
+    <!-- Add Tagify CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" />
+
+    <!-- Add Tagify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
+
     <!-- Helpers -->
     <script src="{{url('public/assets/vendor/js/helpers.js')}}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -111,6 +119,8 @@
     <script async defer src="https://buttons.github.io/buttons.js')}}"></script>
     <script async defer src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     @stack("script")
+
+    @yield('javascript')
 </body>
 
 </html>
