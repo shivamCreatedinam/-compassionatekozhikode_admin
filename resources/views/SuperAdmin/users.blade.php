@@ -8,6 +8,7 @@ $users = User::all();
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Users /</span> Users List</h4>
     <div class="card">
+        @include('status')
     	<div class="card-header">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h5 class="fw-bold card-title">Users List</h5>
@@ -24,6 +25,7 @@ $users = User::all();
                             <th>Email</th>
                             <th>Mobile Number</th>
                             <th>Role</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,6 +36,18 @@ $users = User::all();
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->mobile_number }}</td>
                             <td>{{ $user->role }}</td>
+                            <td>
+                                <div class="d-flex">
+                                    <a href="{{ route('sadmin.edit_user', ['id' => $user->id]) }}" class="btn btn-sm btn-primary mr-3">Edit</a>
+
+                                    <form action="{{ route('sadmin.block_user', $user->id) }}" method="POST" style="display:inline-block;">
+                                        @csrf
+                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to block this User?');">
+                                            Block
+                                        </button>
+                                   </form> 
+                                </div>
+                            </td>
                         </tr>
                     	@endforeach
                     </tbody>

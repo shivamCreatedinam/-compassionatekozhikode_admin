@@ -270,20 +270,20 @@
 
             </ul>
         </li>
-                <li class="menu-item {{ \Request::is('ngo*') ? 'active open' : '' }}">
+                <li class="menu-item {{ \Request::is('blog/*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="NGOs">Blog</div>
+                <div data-i18n="Blogs">Blog</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item {{ \Request::is('user/all*') ? 'active' : '' }}">
-                    <a href="{{ route('sadmin.register_ngo') }}" class="menu-link">
-                        <div data-i18n="All User">New Blog</div>
+                <li class="menu-item {{ \Request::is('blog/index*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.index') }}" class="menu-link">
+                        <div data-i18n="New Blog">New Blog</div>
                     </a>
                 </li>
 
-                <li class="menu-item {{ \Request::is('user/block*') ? 'active' : '' }}">
-                    <a href="{{ route('sadmin.ngo_list') }}" class="menu-link">
+                <li class="menu-item {{ \Request::is('blog/blog_list*') ? 'active' : '' }}">
+                    <a href="{{ route('sadmin.blog_list') }}" class="menu-link">
                         <div data-i18n="Block List">All Blog</div>
                     </a>
                 </li>
